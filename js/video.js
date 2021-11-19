@@ -17,13 +17,13 @@ document.querySelector("#play").addEventListener("click", function() {
 
  document.querySelector("#slower").addEventListener("click", function() {
 	video.playbackRate = video.playbackRate - 0.05;
-	console.log("Speed Slowed Down to" + video.playbackRate);
+	console.log("Speed Slowed Down to " + video.playbackRate);
 	video.play();
  });
 
  document.querySelector("#faster").addEventListener("click", function() {
 	video.playbackRate = video.playbackRate + 0.05;
-	console.log("Speed Up to" + video.playbackRate);
+	console.log("Speed Up to " + video.playbackRate);
 	video.play();
  });
 
@@ -42,11 +42,17 @@ document.querySelector("#play").addEventListener("click", function() {
 document.querySelector("#mute").addEventListener("click", function() {
 	console.log("Mute/Unmute Button Clicked");
 	if (video.muted){
-		video.muted = false;
-		document.getElementById("mute").innerHTML = "Mute"
+		video.muted = false;;
+		document.getElementById("mute").innerHTML = "Mute";
 	}
 	else{
 		video.muted=true;
-		document.getElementById("mute").innerHTML = "Unmute"
+		document.getElementById("mute").innerHTML = "Unmute";
 	}
+});
+
+document.querySelector("#slider").addEventListener("click", function() {
+	console.log(this.value);
+	video.volume = this.value/100;
+	document.getElementById("volume").innerHTML=this.value+"%"
 });
