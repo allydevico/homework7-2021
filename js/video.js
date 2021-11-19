@@ -43,7 +43,7 @@ document.querySelector("#play").addEventListener("click", function() {
 document.querySelector("#mute").addEventListener("click", function() {
 	if (video.muted){
 		console.log("Unmuted Button Clicked");
-		video.muted = false;;
+		video.muted = false;
 		document.getElementById("mute").innerHTML = "Mute";
 	}
 	else{
@@ -56,16 +56,16 @@ document.querySelector("#mute").addEventListener("click", function() {
 document.querySelector("#slider").addEventListener("click", function() {
 	console.log("Volume is: " + this.value);
 	video.volume = this.value/100;
-	document.getElementById("volume").innerHTML=this.value+"%"
+	document.getElementById("volume").innerHTML=this.value+"%";
 });
 
 document.querySelector("#vintage").addEventListener("click", function(){
 	video.classList.add('oldSchool');
-	console.log("Video Style Set To 'Old School'")
-})
+	console.log("Video Style Set To 'Old School'");
+});
 
 document.querySelector("#orig").addEventListener("click", function() {
-	video.classList.remove('oldSchool')
-	console.log("Video Style Set To 'Original'")
+	video.classList.remove('oldSchool');
+	console.log("Video Style Set To 'Original'");
 });
 
