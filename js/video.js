@@ -56,3 +56,14 @@ document.querySelector("#slider").addEventListener("click", function() {
 	video.volume = this.value/100;
 	document.getElementById("volume").innerHTML=this.value+"%"
 });
+
+document.querySelector("#vintage").addEventListener("click", function(){
+	video.classList.add('oldSchool');
+	console.log("Video style set to 'Old School'")
+})
+
+document.querySelector("#orig").addEventListener("click", function() {
+	video.classList.remove('oldSchool')
+	console.log("Video style set to 'Original'")
+});
+
